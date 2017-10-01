@@ -1,0 +1,17 @@
+{
+  "name": "insta-gf-node",
+  "version": "1.0.0",
+  "description": "Auto likes instagram post",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gulzar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "instagram-api": "^1.0.3",
+    "request": "^2.83.0"
+  }
+}
