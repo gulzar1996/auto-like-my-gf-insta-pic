@@ -1,5 +1,5 @@
 ![Image](/instagram.png)
-# Auto like my gf Instagram pics
+<h1 align="center"> Auto like my gf Instagram pics </h1>
 
 Bot to automatically like your friend's Instagram post and notify you on your Slack channel.
 
