@@ -17,7 +17,7 @@ Installation
 
  - `git clone https://github.com/gulzar1996/auto-like-my-gf-insta-pic`
  - `npm install`
- - create a `.env` file (you must set `accessToken`, `user_id` (Target user id) from [Instagram Developer API](https://www.instagram.com/developer) and `slack_url` from [Slack Webhooks](https://api.slack.com/incoming-webhooks) )
+ - create a `.env` file (you must set `accessToken`, `user_id` (Target user id) from [Instagram Developer API](https://www.instagram.com/developer) and `slack_url` from [Slack Webhooks](https://api.slack.com/incoming-webhooks) ) as shown.
  ![.env file](/env.png)
  This would assure that your keys are secured and index.js file is untouched.
  - `npm start` (run the app)
