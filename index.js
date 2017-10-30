@@ -1,6 +1,8 @@
-var accessToken = ENTER_YOUR_INSTAGRAM_ACCESS_TOKEN;
-const user_id = ENTER_USER_ID_TO_MONITOR;
-var slack_url = ENTER_SLACK_INCOMING_WEBHOOK_URL;
+require('dotenv').config();
+
+var accessToken = process.env.YOUR_INSTAGRAM_ACCESS_TOKEN;
+const user_id = process.env.USER_ID_TO_MONITOR;
+var slack_url = process.env.SLACK_INCOMING_WEBHOOK_URL;
 
 var InstagramAPI = require('instagram-api');
 var request = require('request');
@@ -10,23 +12,23 @@ const express = require('express')
 const app = express()
 
 
-app.get('/run', function (req, res) 
+app.get('/run', function (req, res)
 {
-    instagramAPI.userMedia(user_id).then(result => 
+    instagramAPI.userMedia(user_id).then(result =>
     {
         var pics = [];
         var likePromise = [];
-        result.data.forEach(function(media){ 
+        result.data.forEach(function(media){
 
-        if (media.user_has_liked == false)  
+        if (media.user_has_liked == false)
             likePromise.push(instagramAPI.postMediaLike(media.id).then(resp =>
             {
                 return sendPostToSlack(media);
-            }));            
-        });  
+            }));
+        });
 
-        Promise.all(likePromise).then(values => 
-            { 
+        Promise.all(likePromise).then(values =>
+            {
                 console.log('All photos liked')
                 res.send(values);
             },
@@ -36,20 +38,20 @@ app.get('/run', function (req, res)
             }
         );
 
-    }, 
+    },
     function(err)
     {
         res.send(err);
-        console.log(err); // error info 
+        console.log(err); // error info
     });
-    
+
 })
 
 app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
   });
-  
+
 
 function sendPostToSlack(media)
 {
