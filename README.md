@@ -47,6 +47,13 @@ Setting up cronjob
  - paste the url `http://<HEROKU_URL>.herokuapp.com/run` in address
  - schedule every `15 mins`
 
+ Using node-cron (local cron)
+ ===============
+ - `npm start` (run the app)
+ - `node cron.js &` create a node-cron that sends GET to the app every 15 min
+ - `ps` to list background processes
+ - `kill <process id>` to stop the node-cron
+
   Thanks
 ================
 Inspired from https://github.com/cyandterry/Like-My-GF. Code written in JS from scratch.
