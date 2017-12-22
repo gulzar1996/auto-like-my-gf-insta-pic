@@ -40,6 +40,7 @@ Deploy to Heroku
       http://<HEROKU_URL>.herokuapp.com/run
 
 Setting up Cron Job   
+===================
 
  - create an account [cron-job.org](https://cron-job.org/en/)
  - create a cronjob
