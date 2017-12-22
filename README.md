@@ -39,11 +39,11 @@ Deploy to Heroku
 
       http://<HEROKU_URL>.herokuapp.com/run
 
-Setting up Crone Job
+Setting up Cron Job
 ================      
 
  - create an account [cron-job.org](https://cron-job.org/en/)
- - create a cronejob
+ - create a cronjob
  - paste the url `http://<HEROKU_URL>.herokuapp.com/run` in address
  - schedule every `15 mins`
 
