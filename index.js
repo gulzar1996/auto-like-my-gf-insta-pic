@@ -44,7 +44,6 @@ app.get('/run', (req, res) => {
     (result) => {
       const likePromise = [];
       result.data.forEach((media) => {
-
         const {
           id,
           user_has_liked: userHasLiked,
@@ -72,5 +71,5 @@ app.get('/run', (req, res) => {
   );
 });
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 3000));
 app.listen(app.get('port'));
