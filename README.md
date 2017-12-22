@@ -39,13 +39,20 @@ Deploy to Heroku
 
       http://<HEROKU_URL>.herokuapp.com/run
 
-Setting up cronjob
-================      
+Setting up Cron Job   
+===================
 
  - create an account [cron-job.org](https://cron-job.org/en/)
  - create a cronjob
  - paste the url `http://<HEROKU_URL>.herokuapp.com/run` in address
  - schedule every `15 mins`
+
+ Using node-cron (local cron)
+ ===============
+ - `npm start` (run the app)
+ - `node cron.js &` create a node-cron that sends GET to the app every 15 min
+ - `ps` to list background processes
+ - `kill <process id>` to stop the node-cron
 
   Thanks
 ================
