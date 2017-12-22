@@ -10,7 +10,7 @@ Bot to automatically like your friend's Instagram post and notify you on your Sl
 
  How does it work?
 ================  
- This script runs Instagram API every 15mins (Cron Job) and checks for any new Instagram post for a paticular `user_id`. If a new a post is found it likes the post and sends a notification to your configured Slack channel using Slack Webhooks.
+ This script runs Instagram API every 15mins (cronjob) and checks for any new Instagram post for a paticular `user_id`. If a new a post is found it likes the post and sends a notification to your configured Slack channel using Slack Webhooks.
 
 Installation
 ===============
@@ -39,7 +39,7 @@ Deploy to Heroku
 
       http://<HEROKU_URL>.herokuapp.com/run
 
-Setting up Cron Job
+Setting up cronjob
 ================      
 
  - create an account [cron-job.org](https://cron-job.org/en/)
