@@ -44,9 +44,16 @@ app.get('/run', (req, res) => {
     (result) => {
       const likePromise = [];
       result.data.forEach((media) => {
-        if (media.user_has_liked === false) {
-          likePromise.push(instagramAPI.postMediaLike(media.id).then(() =>
-            sendPostToSlack(media)));
+
+        const {
+          id,
+          user_has_liked: userHasLiked,
+        } = media;
+
+        if (!userHasLiked) {
+          likePromise.push(instagramAPI
+            .postMediaLike(id)
+            .then(() => sendPostToSlack(media)));
         }
       });
 
