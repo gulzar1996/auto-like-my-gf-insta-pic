@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const accessToken = process.env.YOUR_INSTAGRAM_ACCESS_TOKEN;
+const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
 const userID = process.env.USER_ID_TO_MONITOR;
 const slackURL = process.env.SLACK_INCOMING_WEBHOOK_URL;
 
