@@ -1,8 +1,8 @@
-var cron = require('node-cron');
-var request = require('request');
+const cron = require('node-cron');
+const request = require('request');
 
-var task = cron.schedule('* */15 * * * *', function() {
-	request('http://localhost:3000/run');
+const task = cron.schedule('* */15 * * * *', () => {
+  request('http://localhost:3000/run');
 });
 
 task.start();
