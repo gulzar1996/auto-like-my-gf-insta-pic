@@ -14,7 +14,11 @@ const app = express();
 
 function sendPostToSlack(media) {
   let caption;
-  if (media.caption === null) { caption = 'Unknown'; } else { caption = media.caption.text; }
+  if (media.caption === null) {
+    caption = 'Unknown';
+  } else {
+    caption = media.caption.text;
+  }
   request.post(
     slackURL,
     {
