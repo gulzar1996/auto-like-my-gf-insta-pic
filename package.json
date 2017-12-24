@@ -10,6 +10,7 @@
   "author": "Gulzar",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.16.1",
     "instagram-api": "^1.0.3",
     "node-cron": "^1.2.1",
