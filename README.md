@@ -53,6 +53,14 @@ Setting up Cron Job
  - `node cron.js &` create a node-cron that sends GET to the app every 15 min
  - `ps` to list background processes
  - `kill <process id>` to stop the node-cron
+ 
+ 
+Docker Setup
+===================
+
+ - Docker >= 17.x, docker-compose >= 1.x
+ - Specify environment values in docker-compose.yml.
+ - Run `docker-compose up`
 
   Thanks
 ================
