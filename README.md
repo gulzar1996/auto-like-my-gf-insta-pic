@@ -61,7 +61,13 @@ Docker Setup
  - Docker >= 17.x, docker-compose >= 1.x
  - Specify environment values in docker-compose.yml.
  - Run `docker-compose up`
+ 
+ ## TODO
+- [ ] Twitter Support
+- [ ] Like only pictures of Gf/Bf (face recognition)
 
-  Thanks
-================
+  
+ Thanks
+=================
+
 Inspired from https://github.com/cyandterry/Like-My-GF. Code written in JS from scratch.
