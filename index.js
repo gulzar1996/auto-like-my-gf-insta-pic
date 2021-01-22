@@ -12,7 +12,7 @@ const express = require('express');
 
 const app = express();
 
-function sendPostToSlack(media) {
+const sendPostToSlack=(media)=> {
   let caption;
   if (media.caption === null) {
     caption = 'Unknown';
